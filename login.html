@@ -1,0 +1,69 @@
+<<!DOCTYPE html>
+<html>
+<head>
+	<title>Hospital Bed Management System</title>
+	<style>
+		body {
+			display: flex;
+			flex-direction: column;
+			min-height: 100vh;
+			align-items: center;
+			justify-content: center;
+			background-image: url('background.jpg');
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+
+		header {
+			width: 100%;
+			background-color: #333;
+			color: #fff;
+			padding: 10px;
+			text-align: center;
+		}
+
+		.container {
+			max-width: 600px;
+			margin-top: 50px;
+			padding: 20px;
+			background-color: #f5f5f5;
+			border-radius: 10px;
+			box-shadow: 0 0 10px #ccc;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Hospital Bed Management System</h1>
+	</header>
+	<div class="container">
+		<p>Please login to access the system.</p>
+		<form action="#" method="post">
+			<label for="username">Username:</label>
+			<input type="text" id="username" name="username"><br><br>
+			<label for="password">Password:</label>
+			<input type="password" id="password" name="password"><br><br>
+			<input type="submit" value="Login">
+		</form>
+	</div>
+	<script>
+		const form = document.querySelector('form');
+	
+		form.addEventListener('submit', (event) => {
+			event.preventDefault(); // prevent the form from submitting
+	
+			const username = form.elements.username.value;
+			const password = form.elements.password.value;
+	
+			if (username === 'admin' && password === 'admin123') {
+				window.location.href  = 'homepage.html'; 
+			} else {
+				alert('Incorrect username or password.');
+			}
+		});
+	</script>
+	
+</body>
+</html>
